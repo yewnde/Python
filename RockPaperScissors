@@ -1,0 +1,72 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+
+user_choice = input("Player , pick 0 for rock , 1 for paper or 2 for scissors\n")
+
+if user_choice == "0":
+  print(rock)
+elif user_choice == "1":
+  print(paper)
+else:
+  print(scissors)
+
+
+s = ['0','1','2']
+
+computer_choice = random.choice(s)
+#print(computer_choice)
+
+
+if computer_choice == '0':
+  print(rock)
+elif computer_choice == '1':
+  print(paper)
+else:
+  print(scissors)
+
+if user_choice == '0' and computer_choice == '1':
+  print('Computer wins!')
+elif user_choice == '1' and computer_choice == '0':
+  print('User wins!')
+elif user_choice == '1' and computer_choice == '2':
+  print('Computer wins!')
+elif user_choice == '2' and computer_choice == '1':
+  print('User wins!')
+elif user_choice == '0' and computer_choice == '2':
+  print('User wins!')
+elif user_choice == '2' and computer_choice == '0':
+  print('Computer wins!')
+elif user_choice == '0' and computer_choice == '0':
+  print('Play again!')
+elif user_choice == '1' and computer_choice == '1':
+  print('Go Again!')
+else:
+  print("Play Again")
